@@ -45,3 +45,55 @@ var 동물 = '사자';
 var 여친 = {
     name: '엠버'
 };
+var 유저 = {
+    name: 'daeun',
+    phone: 123,
+    email: 'ej@'
+};
+var 유저2 = {
+    name: 'daeun',
+    phone: 123,
+    email: 'ej@',
+    adult: true
+};
+//Literal Type 만드는 법 
+var john;
+var kim;
+var 방향;
+방향 = 'left';
+//--------------------------------------------------------------------------------
+var 자료 = {
+    name: 'kim'
+};
+function 나(a) {
+}
+"\uB098(\uC790\uB8CC.name) <- \uC774\uB807\uAC8C\uD558\uBA74 \uC624\uB958\uAC00 \uB0A8 \uC65C? a \uD30C\uB77C\uBBF8\uD130\uC5D0 \uC9C0\uC815\uD55C \uD0B4\uC740 'kim'\uC774\uB77C\uB294 \uD0C0\uC785\uC784\n                  \uC790\uB8CC.name\uC740 string\uC774\uB77C\uB294 \uD0C0\uC785\uC774\uBBC0\uB85C 'kim'\uC774\uB77C\uB294 \uD0C0\uC785\uB9CC \uB4E4\uC5B4\uC62C \uC218 \uC788\uB294 \uAC83\uC784";
+var 함수표현식 = function (para) { return 10; };
+// methods 안에 타입지정하기 
+var 회원정보 = {
+    name: 'kim',
+    age: 30,
+    plusOne: function (x) {
+        return x + 1;
+    },
+    changeName: function () {
+        console.log('안녕');
+    }
+};
+회원정보.plusOne(1);
+회원정보.changeName();
+var cut = function (s) {
+    var result = s.replace(/^0+/, '');
+    return result;
+};
+console.log(cut('00da'));
+var removedash = function (s) {
+    var result = s.replace(/-/g, '');
+    return parseFloat(result);
+};
+function triple(a, fuc1, fuc2) {
+    var res1 = fuc1(a);
+    var res2 = fuc2(res1);
+    return res2;
+}
+console.log(triple('010-1111-777', cut, removedash));

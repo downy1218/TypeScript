@@ -45,3 +45,41 @@ console.log(first.num);
 console.log(first.str);
 
 
+//interface  (extends로 복사 가능)
+
+interface Student{
+    name:string
+}
+interface Teacher extends Student{  
+    age:number
+}
+
+let 학생:Student = {name:'kim'}
+let 선생:Teacher = {name:'cha',age:20}
+
+
+interface Market{
+    product:string,
+    price:number
+}
+interface Card extends Market{
+    card:boolean
+}
+
+let 장바구니:Market[] = [ { product : '청소기', price : 7000 }, { product : '삼다수', price : 800 } ]
+
+
+
+
+interface Mathh{
+    plus:(a:number,b:number) => number,
+    minus:(a:number,b:number) => number
+}
+let 숙제:Mathh = {
+    plus(a,b){
+        return a + b
+    },
+    minus(a,b){
+        return a - b
+    }
+}

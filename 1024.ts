@@ -30,3 +30,14 @@ arr( [40, 'wine', false] );
 // }
 
 // arr( [40, 'wine', false] )
+
+
+
+type rabbit = {color:string}
+type cat = {name:string}
+
+function animal(a:rabbit|cat){
+    if ('name' in a){
+        console.log('this is a cat')
+    }
+}

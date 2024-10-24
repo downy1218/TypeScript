@@ -24,8 +24,8 @@ function arr(_a) {
 }
 ;
 arr([40, 'wine', false]);
-// type 어레이 = (number | string | boolean)[];
-// function arr([a,b,c]:어레이){
-//   console.log(a,b,c)
-// }
-// arr( [40, 'wine', false] )
+function animal(a) {
+    if ('name' in a) {
+        console.log('this is a cat');
+    }
+}

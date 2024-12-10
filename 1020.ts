@@ -16,6 +16,7 @@ let project: {
     started : true,
   };
 
+
 let unionType: string|number = '바보';  //문자열 또는 숫자 다 됨 2개 이상의 타입 설정가능
 let 회원들:(number|string)[] = ['kim',2,'park'] // ()로 묶어줘야함
 let obj:{a:number|string} = {a:'123'}
@@ -27,9 +28,9 @@ let unknownType:unknown = 7; // 타입 해제할 때 = 타입관련 버그 캐�
 
 function 함수(x:number):number{
     return x*2
-} 
+}
+함수(5)
 //리턴값의 타입도 지정할 수 있음
-//리턴이 없는 함수에서 void 타입을 지정하면 실수로 리턴하는 실수 안하게해줌
 
 function 함수2(x?:number):number{
     return x*2
@@ -37,6 +38,7 @@ function 함수2(x?:number):number{
 //?를 써서 파라미터가 옵션임을 설정 (파라미터 있을 수도 없을 수도)
 // (x:number|undefined)랑 같은 말임
 
+//리턴이 없는 함수에서 void 타입을 지정하면 실수로 리턴하는 실수 안하게해줌
 function 함수3(name?:string):void{
     if(name){
         console.log(`안녕하세요 ${name}님`)

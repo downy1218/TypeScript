@@ -25,6 +25,12 @@ let anyType:any = 7; // 타입 해제할 때 = 타입관련 버그가 일어나�
 let unknownType:unknown = 7; // 타입 해제할 때 = 타입관련 버그 캐치
 // let A:string = unknownType; => 오류 발생 (A가 any타입이면 오류 발생 안함)
 
+let unknownVar: unknown = 10;
+// 타입 체크 후에는 사용 가능
+if (typeof unknownVar === "string") {
+    console.log(unknownVar.toUpperCase());  // OK
+}
+` any는 "타입 체크를 포기"하는 것이고, unknown은 "타입을 나중에 체크"하는 것`
 
 function 함수(x:number):number{
     return x*2
